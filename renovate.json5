@@ -1,0 +1,22 @@
+{
+  "enabled": true,
+  "extends": ["config:recommended"],
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["python"],
+      "additionalBranchPrefix": "{{doctype}}",
+    }
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": [
+        ".*.sh$"
+      ],
+      "matchStrings": [
+        "\\s*IMAGE_VERSION_(?<doctype>[A-Z]*)\\s*=\\s*\"(?<currentValue>[0-9][0-9.]*[0-9])\""
+      ],
+      "datasourceTemplate": "docker",
+      "depNameTemplate": "python"
+    }
+  ]
+}
