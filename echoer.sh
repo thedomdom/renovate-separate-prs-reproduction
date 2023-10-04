@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IMAGE_VERSION_DOCTYPE1="3.8"
+IMAGE_VERSION_DOCTYPE1="3.12"
 IMAGE_VERSION_DOCTYPE2="3.8"
 
 docker run python:$IMAGE_VERSION_DOCTYPE1 python -c "print('I can process doctype 1 very well!')"
